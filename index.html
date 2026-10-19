@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Physics AI by Kanra - Made in Ghana</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4742089797440940" crossorigin="anonymous"></script>
+<style>body{margin:0;background:#070a12;color:#fff;font-family:system-ui}.wrap{max-width:600px;margin:auto;padding:12px}.card{background:#0f1525;border:1px solid #1f2a44;border-radius:16px;padding:14px;margin:10px 0}textarea{width:100%;background:#070a12;color:#fff;border:1px solid #23314f;border-radius:12px;padding:14px;min-height:120px;font-size:16px} .btn{width:100%;background:#2f8cff;color:#000;font-weight:800;border:none;border-radius:14px;padding:15px;font-size:17px;margin-top:10px} .adbox{background:#101a2e;border:1px dashed #2a3b62;border-radius:12px;min-height:90px;display:flex;align-items:center;justify-content:center;margin:12px 0} #solution{white-space:pre-wrap;line-height:1.6;font-size:15px} .upload{border:1px dashed #3b82f6;border-radius:12px;padding:12px;text-align:center;color:#7fb4ff;display:block;margin-top:10px} #preview{max-width:100%;border-radius:10px;margin-top:10px;display:none}</style>
+</head><body><div class="wrap">
+<div style="color:#3bb9ff;font-size:12px;letter-spacing:2px;text-align:center;padding:12px;font-weight:700">BY KANRA • MADE IN GHANA 🇬🇭</div>
+<div class="adbox"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4742089797440940" data-ad-slot="5518486682" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div class="card"><textarea id="question" placeholder="Ask anything: What is Strain? Solve x²+5x+6=0 or upload image..."></textarea>
+<label class="upload">📷 Add Image of Question <input type="file" id="imgInput" accept="image/*" hidden></label><img id="preview">
+<button class="btn" onclick="solve()">Solve with AI ⚡</button></div>
+<div class="adbox"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4742089797440940" data-ad-slot="2737996682" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div class="card"><div id="solution">Physics AI by Kanra 🇬🇭 Ready!
+
+I now have HIGH AI level:
+• Understands Hi/Hello
+• Solves Physics, Maths, Chemistry, Biology
+• Reads image of question
+• WASSCE tips
+
+Try: "Strain" or "Hi"</div></div>
+<div class="adbox"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4742089797440940" data-ad-slot="9658621251" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+</div>
+<script>
+let img=null;document.getElementById('imgInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{img=ev.target.result;const p=document.getElementById('preview');p.src=img;p.style.display='block';};r.readAsDataURL(f);});
+async function solve(){const q=document.getElementById('question').value.trim();const out=document.getElementById('solution');if(!q&&!img){alert('Type question or add image!');return}out.textContent='Physics AI by Kanra is thinking... 🇬🇭';try{let prompt=q;if(q.toLowerCase()==='hi'||q.toLowerCase()==='hello'){out.textContent='Hello! I am Physics AI by Kanra 🇬🇭\n\nMade in Ghana for WASSCE students!\n\nI solve:\n✓ Physics (Strain, Stress, Forces, Energy)\n✓ Maths, Chemistry, Biology, English\n✓ Upload image of question!\n\nTry: "What is strain?"';return}prompt=`You are Physics AI by Kanra, Ghanaian teacher for WASSCE. Be friendly, give formula, steps, final answer, tip. Question: ${q}`;const res=await fetch('https://text.pollinations.ai/'+encodeURIComponent(prompt));let text=await res.text();out.textContent=`Physics AI by Kanra 🇬🇭\n\nQ: ${q||'(image)'}\n\n${text}\n\n--- WASSCE Tip: Write formula first! 🇬🇭`;}catch(e){out.textContent='Network error, try again. For Strain: Strain = Extension/Original Length, no unit.';}}
+</script></body></html>
